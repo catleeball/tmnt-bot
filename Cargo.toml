@@ -14,15 +14,10 @@ homepage = "https://github.com/catleeball/tmnt-bot"
 repository = "https://github.com/catleeball/tmnt-bot"
 description = "Make a TMNT logo of a Wikipedia title that you can sing to the TMNT themesong."
 
-[features]
-default = ["clap", "serde", "toml", "mimalloc"]
-cli_args = ["clap"]
-toml_cfg = ["serde", "toml"]
-
 [dependencies]
-clap = { version = "^2.33.1", optional = true }
-serde = { version = "^1.0", features = ["derive"], optional = true }
+clap = "^2.33.1"
+serde = { version = "^1.0", features = ["derive"] }
 # simdjson-rust = {git = "https://github.com/SunDoge/simdjson-rust"}
-mimalloc = { version = "*", optional = true }
-toml = { version = "^0.5.6", optional = true }
+# mimalloc = "*"
+toml = "^0.5.6"
 webscreenshot = "^0.2.2"

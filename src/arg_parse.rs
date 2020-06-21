@@ -1,8 +1,6 @@
-#[cfg(feature = "cli_args")]
 use clap::{App, Arg, crate_version};
 
-/// Handle CLI arguments.
-#[cfg(feature = "cli_args")]
+/// Return CLI arguments.
 pub fn get_args() -> clap::ArgMatches<'static> {
     return App::new("TMNT Bot")
         .about("Make a TMNT logo of a Wikipedia title that you can sing to the TMNT themesong.")
