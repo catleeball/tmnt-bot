@@ -1,13 +1,6 @@
 mod arg_parse;
 mod json_cfg;
-
-// ===== Boilerplate for error-chain crate. =====
-#[macro_use]
-extern crate error_chain;
-mod errors { error_chain! { } }
-pub use errors::*;
-quick_main!(run);
-// ===== End error-chain boilerplate. =====
+use failure::Error;
 
 // ===== mimalloc, anecdotally faster, requires cmake and gcc =====
 // use mimalloc::MiMalloc;
@@ -16,8 +9,9 @@ quick_main!(run);
 // ===== End mimalloc boilerplate =====
 
 /// Main method, before quick_main! composition.
-fn run() {
-    let _args = arg_parse::get_args();
-
-    println!("Hello, world!");
+fn main() -> Result<(), Error> {
+    let args = arg_parse::get_args();
+    let cfg = json_cfg::get_config("/Users/int/.config/tmnt.json")?;
+    println!("{:?}", cfg);
+    Ok(())
 }

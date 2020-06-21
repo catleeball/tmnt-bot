@@ -16,7 +16,9 @@ description = "Make a TMNT logo of a Wikipedia title that you can sing to the TM
 
 [dependencies]
 clap = "^2.33.1"
-error-chain = "^0.12.2"
+dirs = "^3.0.0"
+# error-chain = "^0.12.2"
+failure = "^0.1.8"
 serde = { version = "^1.0", features = ["derive"] }
 simd-json = "^0.3.9"
 # simdjson-rust = {git = "https://github.com/SunDoge/simdjson-rust"}
