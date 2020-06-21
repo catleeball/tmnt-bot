@@ -27,7 +27,7 @@ pub struct Config {
 pub fn get_config(path: &str) -> Result<Config, std::io::Error>
 {
     let reader = get_file_handle(path)?;
-    let cfg = from_reader(reader)?;
+    let cfg: Config = from_reader(reader)?;
     return Ok(cfg);
 }
 

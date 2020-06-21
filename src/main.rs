@@ -13,5 +13,6 @@ fn main() -> Result<(), Error> {
     let args = arg_parse::get_args();
     let cfg = json_cfg::get_config("/Users/int/.config/tmnt.json")?;
     println!("{:?}", cfg);
+    println!("logo {} musr {}", cfg.logo_generator, cfg.mastodon_username);
     Ok(())
 }
