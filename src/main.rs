@@ -2,13 +2,21 @@ mod arg_parse;
 mod json_cfg;
 use failure::Error;
 
-// ===== mimalloc, anecdotally faster, requires cmake and gcc =====
+// ===== mimalloc requires cmake and gcc =====
 // use mimalloc::MiMalloc;
 // #[global_allocator]
 // static GLOBAL: MiMalloc = MiMalloc;
-// ===== End mimalloc boilerplate =====
 
-/// Main method, before quick_main! composition.
+/// Entry point to software.
+/// 
+/// # Arguments
+/// None.
+/// 
+/// # Examples
+/// ```
+/// result = main();
+/// assert_eq!(result, Ok(()));
+/// ```
 fn main() -> Result<(), Error> {
     let args = arg_parse::get_args();
     let cfg = json_cfg::get_config("/Users/int/.config/tmnt.json")?;
