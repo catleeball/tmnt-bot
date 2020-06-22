@@ -1,0 +1,18 @@
+{
+    "logo_generator": "http://glench.com/tmnt",
+    "post_title": true,
+    "post_image": true,
+    "post_url": true,
+    "log_posts": true,
+    "log_file": "/var/log/tmnt.log",
+    "twitter_send_tweet": true,
+    "twitter_consumer_key": "z",
+    "twitter_consumer_secret": "z",
+    "twitter_access_token": "z",
+    "twitter_access_token_secret": "z",
+    "mastodon_send_toot": true,
+    "mastodon_access_token": "z",
+    "mastodon_api_base_url": "https://botsin.space",
+    "mastodon_username": "z",
+    "mastodon_password": "z"
+}
