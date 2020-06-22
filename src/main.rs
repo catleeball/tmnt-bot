@@ -7,6 +7,16 @@ use failure::Error;
 // #[global_allocator]
 // static GLOBAL: MiMalloc = MiMalloc;
 
+/// Entry point to software.
+/// 
+/// # Arguments
+/// None.
+/// 
+/// # Examples
+/// ```
+/// result = main();
+/// assert_eq!(result, Ok(()));
+/// ```
 fn main() -> Result<(), Error> {
     let args = arg_parse::get_args();
     let cfg = json_cfg::get_config("/Users/int/.config/tmnt.json")?;
